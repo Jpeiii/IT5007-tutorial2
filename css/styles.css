@@ -291,3 +291,104 @@ It is used to select direct child elements of a parent element.
   color: var(--white);
 }
 
+/********** 
+ * MOVIE *
+ **********/
+ .movies-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.movies-title {
+  font-size: 3.5rem;
+  color: var(--gray3);
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.movie-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  height: 95%;
+  width: 90%;
+}
+
+.movie {
+  min-width: 50%;
+  padding-left: 3.5rem;
+  box-sizing: content-box;
+}
+
+.movie:last-child {
+  padding-right: 1.5rem;
+}
+
+.movie:first-child {
+  padding-left: 1.5rem;
+}
+
+.movie img {
+  width: 100%;
+  height: 400px;
+  box-shadow: 0.1rem 0.1rem 1.6rem -0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.movie img:hover {
+  cursor: pointer;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.movie-info h2,
+.movie-info h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.movie-info h2 {
+  font-size: 1.75rem;
+  color: var(--gray2);
+  padding-top: 2rem;
+}
+
+.movie-info h4 {
+  font-size: 1.5rem;
+  color: var(--gray1);
+  margin: 1rem 0;
+}
+
+.movie-info a {
+  font-size: 1.5rem;
+  color: var(--netflix-red-1);
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+}
+
+.movie-info  a:hover {
+  color: var(--netflix-red-2);
+}
+
