@@ -19,3 +19,9 @@ git checkout bbf34dd225fe353a8454ec915769a2e6fe4d3c93
 
 ```
 
+Slide 8
+```
+git checkout ea766a29f4b49ae6b089f928ae9e607f2046750e
+
+```
+
