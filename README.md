@@ -6,7 +6,7 @@
 
 
 > [!TIP]
-> Some Git commands are
+> Some git commands to use:
 
 Clone the repo
 ```
