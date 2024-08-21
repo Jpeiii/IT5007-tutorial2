@@ -1,0 +1,211 @@
+/*************** 
+ * BASE STYLES *
+ ***************/
+
+/* Variables */
+:root {
+  --blue: #2d46b9;
+  --white: #ffffff;
+  --black: #000000;
+  --green1: #1ed760;
+  --green2: #1db954;
+  --gray1: #c1c3c6;
+  --gray2: #919496;
+  --gray3: #616467;
+  --hero-bg-color: #1c1c1c;
+  --hero-terms-link: #efefef;
+  --netflix-red-1: #e50914;
+  --netflix-red-2: #f23a3a;
+}
+
+/* Overwrite browser defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/********** 
+ * HEADER *
+ **********/
+header {
+  height: 5.5rem;
+  background: var(--black);
+  width: 100%;
+  background: var(--black);
+  position: fixed;
+  z-index: 999;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 76.5rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.header-logo img {
+  width: 9rem;
+}
+
+.profile {
+  border: 2px solid white;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.profile svg {
+  width: 1.6rem;
+  fill: var(--white);
+}
+
+.profile:hover {
+  border-color: var(--green1);
+}
+
+.profile:hover > svg {
+  fill: var(--green1);
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.nav-desktop ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-desktop ul li {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-right: 3rem;
+  font-weight: 700;
+}
+
+.nav-desktop > ul li:last-child {
+  width: 1.7rem;
+  height: 0.1rem;
+  background: var(--white);
+  transform: rotate(90deg);
+}
+
+.nav-desktop ul li a:hover {
+  color: var(--blue);
+}
+
+.profile-container {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  width: 16rem;
+  height: 8rem;
+  position: absolute;
+  background: var(--white);
+  bottom: -9.5rem;
+  right: -2rem;
+  border-radius: 0.4rem;
+  visibility: hidden;
+}
+
+/* Input of type check that will be used to open and close the dropdown menu */
+.dropdown-menu-toggler {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* This code will create the triangle that is on top of the dropdown menu */
+.dropdown-menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -1.3rem;
+  right: 1rem;
+  border-left: 1.6rem solid transparent;
+  border-right: 1.6rem solid transparent;
+  border-bottom: 1.6rem solid var(--white);
+}
+
+.dropdown-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Dropdown menu 'Account' link */
+.dropdown-menu ul li:first-child {
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+/* Dropdown menu 'Log out' link */
+.dropdown-menu ul li:last-child {
+  margin-bottom: 1rem;
+  color: var(--gray2);
+}
+
+/* This line will show the dropdown menu when the user clicks on 'Profile' */
+.dropdown-menu-toggler:checked + .dropdown-menu {
+  visibility: visible;
+}
+
+/* This line will change the rotation of the arrow when the dropdown menu is opened */
+.dropdown-menu-toggler:checked
+  + .dropdown-menu
+  + .profile
+  + ul
+  li:last-child
+  svg {
+  transform: rotate(180deg);
+}
+
+
