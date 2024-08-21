@@ -29,6 +29,12 @@ Slide 9
 git checkout e905fde54ed266b21e0fa5fc42122acc7b56325d
 
 ```
+Slide 10
+```
+git checkout 8e0cab39ad1e8d54208e5402c5a9a93a1fb7df96
+
+```
+
 
 
 
