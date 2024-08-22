@@ -34,6 +34,10 @@ Slide 12
 git checkout 8e0cab39ad1e8d54208e5402c5a9a93a1fb7df96
 
 ```
+To discard the changes, reverts the working directory to match the HEAD commit.
+```
+git stash
+```
 
 
 
